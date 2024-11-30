@@ -17,9 +17,21 @@ body {
     font-family: 'LibraSerif';
     min-height: 100vh;
     background-color: #E9E2D9E5;
-    margin: 40px 0 40px 0;
+    margin: 40px 0 0 0;
     padding: 0;
 }
+
+/* Scroll snap styling */
+/* html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+} */
+
 
 #qrCode {
     position: fixed;
@@ -28,6 +40,7 @@ body {
     width: 125px;
     margin: 0 15px 15px 0;
     border-radius: 15px;
+    z-index: 5;
 }
 
 .title {
@@ -79,83 +92,103 @@ nav a {
 }
 
 /* Menu section styling */
-#menu {
-    margin-bottom: 20px;
-    min-height: 520px;
-}
-
-#menuItems {
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menuItems {
+    padding-top: 30px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1200px;
+    gap: 25px;
     justify-content: center;
-}
-
-.menuDiv {
+  }
+  
+  .cardInfo {
     display: flex;
     flex-direction: column;
-    color: black;
-    background-color: white;
-    border-radius: 15px;
-    width: 250px;
-    /* width: calc(25% - 15px); 4 items in a row instead of 3*/
-    min-height: 350px;
-    word-break: break-word;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.menuImg {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-bottom: 10px;
-}
-
-.menuName, .menuDesc {
-    padding: 0 15px;
-}
-
-.menuName {
-    margin: 10px 0;
-    font-size: 1.2em;
-}
-
-.menuDesc {
-    margin: 0 0 15px 10px;
-    font-size: 0.9em;
-    font-family: 'AlbertSans';
-    flex-grow: 1;
-}
-
-.menuPrice {
-    margin: 0 10px 20px 25px;
-    font-family: 'AlbertSans';
-    font-weight: bold;
-    color: #424242;
-    margin-top: auto;
-}
-
-.menuBtn {
-    background: none;
-    border-radius: 5px;
-    border: 1px solid #886b60;
-    color: #886b60;
-    font-size: 1em;
-    font-weight: 500;
-    padding: 8px 15px;
-    margin: auto 15px 15px 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.menuBtn:hover {
-    background-color: #886b60;
-    color: white;
-}
-
+    align-items: flex-start;
+    height: 75px;
+    margin: 0 10px 10px 20px;
+  }
+  
+  #menu {
+      margin-bottom: 20px;
+      min-height: 520px;
+  }
+  
+  #menuItems {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      justify-content: center;
+  }
+  
+  .menuCard {
+      display: flex;
+      flex-direction: column;
+      color: black;
+      background-color: white;
+      border-radius: 15px;
+      width: 250px;
+      max-height: 400px;
+      /* width: calc(25% - 15px); 4 items in a row instead of 3*/
+      min-height: 350px;
+      word-break: break-word;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menuImg {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      margin-bottom: 10px;
+  }
+  
+  .menuName, .menuDesc {
+      padding: 0 15px;
+  }
+  
+  .menuName {
+      margin: 10px 0;
+      font-size: 1.2em;
+  }
+  
+  .menuDesc {
+      margin: 0 0 15px 10px;
+      font-size: 0.9em;
+      font-family: 'AlbertSans';
+      flex-grow: 1;
+  }
+  
+  .menuPrice {
+      margin: 0 10px 5px 0px;
+      font-family: 'AlbertSans';
+      font-weight: bold;
+      color: #424242;
+      margin-top: auto;
+  }
+  
+  .menuBtn {
+      background: none;
+      border-radius: 5px;
+      border: 1px solid #886b60;
+      color: #886b60;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 8px 15px;
+      margin: auto 15px 15px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  }
+  
+  .menuBtn:hover {
+      background-color: #886b60;
+      color: white;
+  }
 /* Bakery's description styling */
 .descDiv {
     display: flex;
@@ -178,7 +211,7 @@ nav a {
     background-position: right center;
     width: 800px;
     height: 230px;
-    padding: 25px 0 0 240px;
+    padding: 120px 0 0 240px;
     gap: 50px;
 }
 
@@ -205,16 +238,40 @@ nav a {
 }
 
 /* Information section styling */
+#information {
+    display: flex;
+    flex-direction: column;
+    background-color: #e2d9cee5;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0 40px 0;
+}
+
 #infoTitle {
     margin: 0 0 10px 0;
 }
 
 #infoDivs {
     display: flex;
+    justify-content: center;
     padding: 25px 0;
     width: 100%;
     gap: 50px;
     font-family: 'AlbertSans', sans-serif;
+}
+
+.infoDiv a {
+    color: #8b6452;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.infoDiv a:first-child {
+    margin-top: 20px;
+}
+
+.infoDiv a:hover {
+    color: #613e2d;
 }
 
 .infoCity {
@@ -233,7 +290,7 @@ nav a {
     gap: 30px;
 }
 #socialsDiv img {
-    width: 40px;
+    width: 30px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }

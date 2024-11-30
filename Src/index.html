@@ -16,12 +16,12 @@
         <h1 id="mainTitle">Kepyklėlė</h1>
     </header>
 
-    <!-- Section with a navigation bar of the menu. -->
+    <!-- The navigation bar of the menu. -->
     <nav>
         <a id="navItem1" class="catSelected" name="Duonos meniu" onclick="selectCategory(event)">Duona</a>
         <a id="navItem2" name="Bandelių meniu" onclick="selectCategory(event)">Bandelės</a>
         <a id="navItem3" name="Spurgų meniu" onclick="selectCategory(event)">Spurgos</a>
-        <a id="navItem4" name="Desertų meniu" onclick="selectCategory(event)">Desertai</a>
+        <a id="navItem4" name="Tortų meniu" onclick="selectCategory(event)">Tortai</a>
         <a id="navItem5" name="Kavos meniu" onclick="selectCategory(event)">Kava</a>
     </nav>
 
@@ -30,118 +30,168 @@
         <!-- Bread category -->
         <h1 id="menuTitle" class="title">Duonų meniu</h1>
         <div id="menuItems">
-            <div class="menuDiv menuCat1">
-                <img src="../Photographic/Menu/Bread/Banana-bread.jpg" class="menuImg" alt="Bananinė duona">
-                <h2 class="menuName">Bananinė duona</h2>
-                <p class="menuDesc">Gardi duona su bananais. Ši duona yra skirta tiems kurie nori išbandyti ko nors naujo.</p>
-                <p class="menuPrice">2.49€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat1">
-                <img src="../Photographic/Menu/Bread/Whole-grain-bread.jpg" class="menuImg" alt="Pilno grūdo duona">
-                <h2 class="menuName">Pilno grūdo duona</h2>
-                <p class="menuDesc">Duona skirta sveikuoliams. Įvairių grūdų rūšių santykis yra neapsakomas.</p>
-                <p class="menuPrice">1.99€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat1">
-                <img src="../Photographic/Menu/Bread/Naan-bread.jpg" class="menuImg" alt="Naan Duona">
-                <h2 class="menuName">Naan duona</h2>
-                <p class="menuDesc">Skoniu atkeliaukite į pietų Aziją su nematytais ruošimo metodais.</p>
-                <p class="menuPrice">3.99€</p>
-                <button class="menuBtn">Mygtukas</button>
+            <div class="menuItems menuCat1">
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Bread/Banana-bread.jpg" class="menuImg" alt="Bananinė duona">
+                    <h2 class="menuName">Bananinė duona</h2>
+                    <div class="menuDesc">Saldi ir drėgna duona su tikr bananų skoniu!</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">3.49€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Bread/Naan-bread.jpg" class="menuImg" alt="Bananinė duona">
+                    <h2 class="menuName">Naan duona</h2>
+                    <div class="menuDesc">Autentiška indiška duona, kepta tradiciniame tandyro pečiuje.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">2.99€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Bread/Whole-grain-bread.jpg" class="menuImg" alt="Bananinė duona">
+                    <h2 class="menuName">Pilno grūdo duona</h2>
+                    <div class="menuDesc">Sveika ir maistinga duona su traškia plutele.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">2.79€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Buns' category -->
-            <div class="menuDiv menuCat2" style="display: none;">
-                <img src="../Photographic/Menu/Buns/Cinnamon-roll.jpg" class="menuImg" alt="Cinamoninė bandelė">
-                <h2 class="menuName">Cinamoninė bandelė</h2>
-                <p class="menuDesc">Nuostabus ir puikiai subalansuotas cinamono ir balto šokolado santykis.</p>
-                <p class="menuPrice">0.89€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat2" style="display: none;">
-                <img src="../Photographic/Menu/Buns/Garlic-bun.jpeg" class="menuImg" alt="Korėjietiška bandelė">
-                <h2 class="menuName">Korėjietiška bandelė su česnakais</h2>
-                <p class="menuDesc">Puikus korėjietiškas užkandis prie pagrindio patiekalo.</p>
-                <p class="menuPrice">1.29€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat2" style="display: none;">
-                <img src="../Photographic/Menu/Buns/Cottage-cheese-bun.jpg" class="menuImg" alt="Bandelė su varške">
-                <h2 class="menuName">Bandelė su varške</h2>
-                <p class="menuDesc">Visiems žinomas, bet neatsibostantis varškės ir šviežios tešlos skonis.</p>
-                <p class="menuPrice">0.99€</p>
-                <button class="menuBtn">Mygtukas</button>
+            <div class="menuItems menuCat2" style="display: none;">
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Buns/Cinnamon-roll.jpg" class="menuImg" alt="Bananinė duona">
+                    <h2 class="menuName">Cinamoninė bandelė</h2>
+                    <div class="menuDesc">Minkšta bandelė su cinamono ir cukraus įdaru.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">1.99€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Buns/Cottage-cheese-bun.jpg" class="menuImg" alt="Bananinė duona">
+                    <h2 class="menuName">Varškės bandelė</h2>
+                    <div class="menuDesc">Puri bandelė su kreminiu varškės įdaru.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">1.79€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Buns/Garlic-bun.jpeg" class="menuImg" alt="Bananinė duona">
+                    <h2 class="menuName">Bandelė su česnaku</h2>
+                    <div class="menuDesc">Traški bandelė su šviežių česnakų ir žolelių sviestu.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">1.49€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Donuts' category -->
-            <div class="menuDiv menuCat3" style="display: none;">
-                <img src="../Photographic/Menu/Donut.jpg" class="menuImg" alt="Spurga">
-                <h2 class="menuName">Spurga</h2>
-                <p class="menuDesc">Skirta tiems kurie mėgsta smaližiauti.</p>
-                <p class="menuPrice">1.09€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat3" style="display: none;">
-                <img src="../Photographic/Menu/Donut.jpg" class="menuImg" alt="Spurga">
-                <h2 class="menuName">Spurga</h2>
-                <p class="menuDesc">Skirta tiems kurie mėgsta smaližiauti.</p>
-                <p class="menuPrice">1.09€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat3" style="display: none;">
-                <img src="../Photographic/Menu/Donut.jpg" class="menuImg" alt="Spurga">
-                <h2 class="menuName">Spurga</h2>
-                <p class="menuDesc">Skirta tiems kurie mėgsta smaližiauti.</p>
-                <p class="menuPrice">1.09€</p>
-                <button class="menuBtn">Mygtukas</button>
+            <div class="menuItems menuCat3" style="display: none;">
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Donuts/coconut-donut.jpg" class="menuImg" alt="Kokosinė spurga">
+                    <h2 class="menuName">Kokosinė spurga</h2>
+                    <div class="menuDesc">Minkšta spurga padengta saldžiu kokoso glajumi ir įdomiu įdaru.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">1.29€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Donuts/chocolate-donut.jpg" class="menuImg" alt="Šokoladinė spurga">
+                    <h2 class="menuName">Šokoladinė spurga</h2>
+                    <div class="menuDesc">Spurga su tirpiu šokolado glajumi ir spalvotais pabarstukais.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">1.49€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Donuts/jam-donut.jpg" class="menuImg" alt="Spurga su uogiene">
+                    <h2 class="menuName">Spurga su uogiene</h2>
+                    <div class="menuDesc">Puri spurga su braškių uogienės įdaru ir cukraus pudra.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">1.39€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
             </div>
 
             <!-- Cakes' category -->
-            <div class="menuDiv menuCat4" style="display: none;">
-                <img src="../Photographic/Menu/Napoleon-cake.jpg" class="menuImg" alt="Napoleono tortas">
-                <h2 class="menuName">Tortas ,,Napoleonas"</h2>
-                <p class="menuDesc">Šviežios vyšnios, kokybiška tešla, miško aromatas. Ar kas gali būti geriau?</p>
-                <p class="menuPrice">2.99€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat4" style="display: none;">
-                <img src="../Photographic/Menu/Cakes/Forest-cake.jpg" class="menuImg" alt="Miško gėrybių tortas">
-                <h2 class="menuName">Tortas ,,Miško karalius"</h2>
-                <p class="menuDesc">Įvarios miško gėrybės viename kąsnyje, kuris tikrai nenuvils.</p>
-                <p class="menuPrice">3.49€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat4" style="display: none;">
-                <img src="../Photographic/Menu/Napoleon-cake.jpg" class="menuImg" alt="Napoleono tortas">
-                <h2 class="menuName">Tortas ,,Napoleonas"</h2>
-                <p class="menuDesc">Šviežios vyšnios, kokybiška tešla, miško aromatas. Ar kas gali būti geriau?</p>
-                <p class="menuPrice">2.99€</p>
-                <button class="menuBtn">Mygtukas</button>
+            <div class="menuItems menuCat4" style="display: none;">
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Cakes/napoleon-cake.jpg" class="menuImg" alt="Tortas ,,Napoleonas">
+                    <h2 class="menuName">Tortas ,,Napoleonas"</h2>
+                    <div class="menuDesc">Klasikinis sluoksniuotos tešlos tortas su kreminiu įdaru ir traškia viršutine dalimi.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">3.49€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Cakes/forest-cake.jpg" class="menuImg" alt="Šokoladinė spurga">
+                    <h2 class="menuName">Tortas ,,Miško karalius"</h2>
+                    <div class="menuDesc">Šokoladinis biskvitas su grietinėlės kremu ir šviežiomis miško uogomis.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">3.99€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Cakes/chocolate-cake.jpg" class="menuImg" alt="Spurga su uogiene">
+                    <h2 class="menuName">Tortas ,,Šokolado bomba"</h2>
+                    <div class="menuDesc">Trijų sluoksnių šokoladinis tortas su tamsaus šokolado kremu ir ganašu.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">3.79€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
             </div>
 
-            <!-- Coffee category -->
-            <div class="menuDiv menuCat5" style="display: none;">
-                <img src="../Photographic/Menu/Coffee/Cappuccino.jpg" class="menuImg" alt="Kapučino puodelis">
-                <h2 class="menuName">Kapučinas</h2>
-                <p class="menuDesc">Klasika, kuri niekada nenuvilia.</p>
-                <p class="menuPrice">1.69€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat5" style="display: none;">
-                <img src="../Photographic/Menu/Coffee/Espresso.jpg" class="menuImg" alt="Espresso puodelis">
-                <h2 class="menuName">Espresso</h2>
-                <p class="menuDesc">Mėgstantiems stiprų, aitresnį skonį.</p>
-                <p class="menuPrice">1.39€</p>
-                <button class="menuBtn">Mygtukas</button>
-            </div>
-            <div class="menuDiv menuCat5" style="display: none;">
-                <img src="../Photographic/Menu/Coffee/Mocha.jpg" class="menuImg" alt="Mocha puodelis">
-                <h2 class="menuName">Mocha</h2>
-                <p class="menuDesc">Saldi, pilna ingredientų įvairovė.</p>
-                <p class="menuPrice">1.99€</p>
-                <button class="menuBtn">Mygtukas</button>
+            <!-- Coffee' category -->
+            <div class="menuItems menuCat5" style="display: none;">
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Coffee/Cappuccino.jpg" class="menuImg" alt="Kapučinas">
+                    <h2 class="menuName">Kapučinas</h2>
+                    <div class="menuDesc">Klasikinis kapučinas su šilkiniu pienu ir puria puta.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">2.49€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Coffee/espresso.jpg" class="menuImg" alt="Espresso">
+                    <h2 class="menuName">Espresso</h2>
+                    <div class="menuDesc">Tradicinis itališkas espresso iš šviežiai maltų kavos pupelių.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">1.79€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
+            
+                <div class="menuCard">
+                    <img src="../Photographic/Menu/Coffee/Mocha.jpg" class="menuImg" alt="Mocha">
+                    <h2 class="menuName">Mocha</h2>
+                    <div class="menuDesc">Espresso su belgišku šokoladu ir pieno putomis.</div>
+                    <div class="cardInfo">
+                    <p class="menuPrice">2.89€</p>
+                    <button class="menuBtn">Mygtukas</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -177,7 +227,7 @@
     </section>
 
     <!-- Section with information about city's addresses, phone numbers, emails etc. -->
-    <section id="information">
+    <footer id="information">
         <h1 id="infoTitle" class="title">Apie mus</h1>
         <div id="infoDivs">
             <div class="infoDiv">
@@ -214,26 +264,22 @@
                 </a>
             </div>
         </div>
-    </section>
-
-    <!-- Social media links section. -->
-    <section>
         <h1 id="socialsTitle" class="title">Soc. tinklai</h1>
-        <div id="socialsDiv">
-            <a href="https://www.facebook.com/">
-                <img src="../Photographic/Icons/Facebook-logo.svg" id="facebookLogo">
-            </a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img src="../Photographic/Icons/Instagram-logo.svg" id="instagramLogo">
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank">
-                <img src="../Photographic/Icons/TikTok-logo.svg" id="tiktokLogo">
-            </a>
-        </div>
-    </section>
+            <div id="socialsDiv">
+                <a href="https://www.facebook.com/">
+                    <img src="../Photographic/Icons/Facebook-logo.svg" id="facebookLogo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="../Photographic/Icons/Instagram-logo.svg" id="instagramLogo">
+                </a>
+                <a href="https://www.tiktok.com/" target="_blank">
+                    <img src="../Photographic/Icons/TikTok-logo.svg" id="tiktokLogo">
+                </a>
+            </div>
+        </footer>
 
     <!-- Website's footer with copyrights and reserved rights. -->
-
+    <footer></footer>
     <script src="script.js"></script>
 </body>
 </html>

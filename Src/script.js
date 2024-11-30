@@ -33,18 +33,18 @@ function selectCategory(event) {
 
     // Show the items of the selected category
     if (event.target === navItem1) {
-        Array.from(menuCat1).forEach(item => item.style.display = 'block');
+        Array.from(menuCat1).forEach(item => item.style.display = 'flex');
     }
     else if (event.target === navItem2) {
-        Array.from(menuCat2).forEach(item => item.style.display = 'block');
+        Array.from(menuCat2).forEach(item => item.style.display = 'flex');
     }
     else if (event.target === navItem3) {
-        Array.from(menuCat3).forEach(item => item.style.display = 'block');
+        Array.from(menuCat3).forEach(item => item.style.display = 'flex');
     }
     else if (event.target === navItem4) {
-        Array.from(menuCat4).forEach(item => item.style.display = 'block');
+        Array.from(menuCat4).forEach(item => item.style.display = 'flex');
     }
     else if (event.target === navItem5) {
-        Array.from(menuCat5).forEach(item => item.style.display = 'block');
+        Array.from(menuCat5).forEach(item => item.style.display = 'flex');
     }
 }

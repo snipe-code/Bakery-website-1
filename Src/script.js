@@ -48,3 +48,22 @@ function selectCategory(event) {
         Array.from(menuCat5).forEach(item => item.style.display = 'flex');
     }
 }
+
+const numbers = [1,2,3,4,5]
+function triple(element) {
+    return element * 3
+}
+
+function foreachfunct(element) {
+    element++
+}
+
+const nums = numbers.map(triple)
+
+console.log(nums)
+
+const numsforeach = numbers.forEach(foreachfunct)
+
+console.log(numsforeach)
+
+

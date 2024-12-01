@@ -32,6 +32,10 @@ section {
     scroll-snap-stop: always;
 } */
 
+#descSection, #statsSection, #footer {
+    padding: 20px 20px;
+}
+
 
 #qrCode {
     position: fixed;
@@ -92,70 +96,66 @@ nav a {
 }
 
 /* Menu section styling */
-* {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menuItems {
+
+.menuItems {
     padding-top: 30px;
     display: flex;
-    gap: 25px;
+    gap: 15px;
+    min-height: 450px;
     justify-content: center;
-  }
+    flex-wrap: wrap;
+}
+
+#menuContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.menuCard {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    width: 300px;
+    max-height: 400px;
+    min-height: 350px;
+    word-break: break-word;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
   
-  .cardInfo {
+.cardInfo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     height: 75px;
     margin: 0 10px 10px 20px;
-  }
+}
   
-  #menu {
-      margin-bottom: 20px;
-      min-height: 520px;
-  }
+#menu {
+    margin-bottom: 20px;
+    min-height: 520px;
+}
   
-  #menuItems {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      max-width: 1200px;
-      justify-content: center;
-  }
+.menuImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 10px;
+}
   
-  .menuCard {
-      display: flex;
-      flex-direction: column;
-      color: black;
-      background-color: white;
-      border-radius: 15px;
-      width: 250px;
-      max-height: 400px;
-      /* width: calc(25% - 15px); 4 items in a row instead of 3*/
-      min-height: 350px;
-      word-break: break-word;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+.menuName, .menuDesc {
+    padding: 0 15px;
+}
   
-  .menuImg {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      margin-bottom: 10px;
-  }
-  
-  .menuName, .menuDesc {
-      padding: 0 15px;
-  }
-  
-  .menuName {
-      margin: 10px 0;
-      font-size: 1.2em;
-  }
+.menuName {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
   
   .menuDesc {
       margin: 0 0 15px 10px;
@@ -189,57 +189,58 @@ nav a {
       background-color: #886b60;
       color: white;
   }
-/* Bakery's description styling */
-.descDiv {
-    display: flex;
-}
 
-.descItems {
+  /* About section styling */
+  .descItems {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 700px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .descItem {
     display: flex;
-    margin-bottom: 35px;
-    background-image: url(../Photographic/Misc/Brush1.png);
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    width: 100%;
+    background-image: url("../Photographic/Misc/Brush1.png");
     background-size: 100% 100%;
-    background-position: left center;
     background-repeat: no-repeat;
-    background-position: right center;
-    width: 800px;
-    height: 230px;
-    padding: 120px 0 0 240px;
-    gap: 50px;
+    background-position: center;
 }
 
-#descItem2 {
+.descItem2 {
+    transform: scaleX(-1);
+}
+.descItem2 > * {
     transform: scaleX(-1);
 }
 
-#descItem2 > * {
-    transform: scaleX(-1);
-}
-
-.descImg {
-    width: 300px;
+.descInfo {
+    margin-left: 180px;
 }
 
 .descItem img {
-    width: 220px;
-    height: 220px;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
 }
 
 .descItem p {
     font-family: 'AlbertSans';
     font-size: 16px;
+    line-height: 1.5;
 }
 
-/* Information section styling */
-#information {
+/* Footer section styling */
+#footer {
     display: flex;
+    align-items: center;
     flex-direction: column;
     background-color: #e2d9cee5;
     width: 100%;
@@ -247,8 +248,20 @@ nav a {
     padding: 20px 0 40px 0;
 }
 
+#footer hr {
+    width: 600px;
+    border: none;
+    height: 1px;
+    background-color: #613e2d;
+    margin-bottom: 25px;
+}
+
 #infoTitle {
     margin: 0 0 10px 0;
+}
+
+.infoPhone {
+    margin: 0;
 }
 
 #infoDivs {
@@ -266,10 +279,6 @@ nav a {
     transition: color 0.3s ease;
 }
 
-.infoDiv a:first-child {
-    margin-top: 20px;
-}
-
 .infoDiv a:hover {
     color: #613e2d;
 }
@@ -279,35 +288,58 @@ nav a {
     color: #846B5F;
 }
 
-.infoLabel, .infoPhone {
-    margin: 0 0 3px 0;
+.infoEmail {
+    margin-top: 3px;
 }
 
-#socialsDiv {
+.infoLabel {
+    margin-bottom: 5px;
+}
+
+#socialsDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+#socialsDiv div {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
+    width: 150px;
 }
+
+#copyright {
+    font-family: 'AlbertSans', sans-serif;
+    margin-bottom: 25px;
+}
+
 #socialsDiv img {
-    width: 30px;
+    width: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
 #socialsDiv img:hover {
-    transform: scale(1.1) translateY(-5px);
+    transform: scale(1.05) translateY(-3px);
 }
 
 /* Scaling to apply to device screen size */
-@media (max-width: 1200px) {
-    .menuDiv {
-        width: calc(50% - 10px);
+@media screen and (max-width: 1000px) {
+    .menuItems {
+        gap: 20px;
     }
 }
 
-@media (max-width: 800px) {
-    .menuDiv {
+@media screen and (max-width: 768px) {
+    .menuCard {
         width: 100%;
+        max-width: 200px;
+    }
+
+    .descInfo {
+        margin-left: 100px;
     }
 }
+

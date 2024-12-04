@@ -36,17 +36,6 @@ section {
     padding: 20px 20px;
 }
 
-
-#qrCode {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 125px;
-    margin: 0 15px 15px 0;
-    border-radius: 15px;
-    z-index: 5;
-}
-
 .title {
     font-size: 30px;
     margin: 40px 0 20px 0;
@@ -258,12 +247,8 @@ nav a {
     transition: transform 0.3s ease;
 }
 
-.statBox:hover {
-    transform: translateY(-5px);
-}
-
 .statNumber {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #846B5F;
     font-weight: bold;
     margin-bottom: 10px;

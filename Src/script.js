@@ -66,4 +66,31 @@ const numsforeach = numbers.forEach(foreachfunct)
 
 console.log(numsforeach)
 
+// Statistis' numbers' Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+            entry.target.classList.add('counted');
+            const target = parseInt(entry.target.getAttribute('data-target'));
+            let count = 0;
+            const duration = 1500; // Duration of the animation
+            const steps = 100; // Amount of how many changes the number will 
+            const interval = duration / steps;
+            const increment = target / steps;
+            
+            const counter = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    entry.target.innerText = target > 999 ? target.toLocaleString() + '+' : target + '+';
+                    clearInterval(counter);
+                } else {
+                    entry.target.innerText = Math.round(count);
+                }
+            }, interval);
+        }
+    });
+}, { threshold: 0.5 });
 
+document.querySelectorAll('.statNumber').forEach(statNumber => {
+    observer.observe(statNumber);
+});
